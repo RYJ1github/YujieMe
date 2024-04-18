@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section>
+        <img src="bg.jpg" id="bg">
+        <img src="moon.png" id="moon">
+        <img src="mountain.png" id="mountain">
+        <img src="road.png" id="road">
+        <h2 id="text">Hello, I'm Yujie</h2>
+    </section>
+    <script>
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");        
+        let text = document.getElementById("text");
+
+        window.addEventListener("scroll", function(){
+            var value = window.scrollY;
+            
+            bg.style.top = value * 0.5 + "px";
+            moon.style.left = -value * 0.5 + "px";
+            mountain.style.top = -value * 0.15 + "px"; // Corrected variable name
+            road.style.top = value * 0.15 + "px";
+            text.style.top = value * 1 + "px";
+        });
+    </script>
+    <div id="about-me">
+        <h3>About Me</h3>
+        <p>I'm a 21-year-old student currently seeking job opportunities. I have a passion for gaming and spend much of my free time exploring virtual worlds and competing with friends. As a student, I'm eager to learn and grow, and I'm excited about the prospect of applying my skills and knowledge in a professional environment.</p>
+    </div>
+    <div id="my-interests">
+    <h3>My Interests</h3>
+    <p>I'm passionate about gaming, especially multiplayer online games where I can challenge myself and collaborate with others. I also enjoy learning new technologies and experimenting with coding projects in my spare time. Outside of the digital world, I love outdoor activities like hiking and camping.</p>
+</div>
+</body>
+</html>
